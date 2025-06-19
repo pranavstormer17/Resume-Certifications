@@ -4,51 +4,53 @@
   <meta charset="UTF-8">
   <title>LEAP Practicum Certificate (LP201 – Innovative Engineering)</title>
   <style>
-    /* fill the viewport with the certificate image */
+    /* make the PDF fill the whole browser window */
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      background: #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background: #f0f0f0;
     }
-    .cert-img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
+    .pdf-viewer {
+      width: 100%;
+      height: 100%;
+      border: none;
     }
     .fallback {
-      position: fixed;
+      position: absolute;
       bottom: 1em;
       left: 50%;
       transform: translateX(-50%);
-      color: #fff;
-      background: rgba(0,0,0,0.6);
+      background: rgba(255,255,255,0.8);
       padding: 0.5em 1em;
       border-radius: 4px;
       font-size: 0.9em;
+      text-align: center;
     }
     .fallback a {
-      color: #4FC3F7;
+      color: #007acc;
       text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <img
-    class="cert-img"
-    src="https://cdn.jsdelivr.net/gh/pranavstormer17/Resume-Certifications@main/docs/LEAP%20Practicum%20Certification%20%28LP201%20%E2%80%93%20Innovative%20Engineering%29.jpg"
-    alt="LEAP Practicum Certification (LP201 – Innovative Engineering)"
-  />
+
+  <!-- Inline PDF embed -->
+  <iframe
+    class="pdf-viewer"
+    src="https://cdn.jsdelivr.net/gh/pranavstormer17/Resume-Certifications@main/docs/LEAP%20Practicum%20Certification%20%28LP201%20%E2%80%93%20Innovative%20Engineering%29.pdf"
+    title="LEAP Practicum Certification (LP201 – Innovative Engineering)"
+  ></iframe>
+
+  <!-- Fallback if the PDF won’t render inline -->
   <div class="fallback">
-    Can’t see the certificate? 
+    Can’t display the certificate inline?  
     <a
-      href="https://cdn.jsdelivr.net/gh/pranavstormer17/Resume-Certifications@main/docs/LEAP%20Practicum%20Certification%20%28LP201%20%E2%80%93%20Innovative%20Engineering%29.jpg"
-      target="_blank" rel="noopener">
-      Download image
-    </a>
+      href="https://cdn.jsdelivr.net/gh/pranavstormer17/Resume-Certifications@main/docs/LEAP%20Practicum%20Certification%20%28LP201%20%E2%80%93%20Innovative%20Engineering%29.pdf"
+      target="_blank"
+      rel="noopener"
+    >Download PDF</a>.
   </div>
+
 </body>
 </html>
